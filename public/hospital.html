@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="style.css"></head>
+<body>
+    <header><h1>Hospital Dashboard</h1> <button onclick="logout()">Logout</button></header>
+    <div class="container">
+        <h3>Post a Blood Requirement</h3>
+        <form id="requestForm">
+            <input type="text" id="reqBloodType" placeholder="Blood Type (e.g. O+)" required>
+            <input type="number" id="units" placeholder="Units required" required>
+            <button type="submit">Post Request</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('requestForm').addEventListener('submit', postRequest);
+    </script>
+</body>
+</html>

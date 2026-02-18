@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - LifeFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific styles for the Admin table */
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
+        th, td { padding: 12px; border-bottom: 1px solid #ddd; text-align: left; }
+        th { background-color: #d32f2f; color: white; }
+        .btn-delete { background-color: #444; color: white; padding: 5px 10px; font-size: 0.9rem; }
+        .btn-delete:hover { background-color: #000; }
+    </style>
+</head>
+<body onload="loadUsers()">
+
+    <header>
+        <h1>Admin Dashboard</h1>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <div class="container">
+        <h2>Manage Users & Hospitals</h2>
+        <p>View registered users and manage system access.</p>
+
+        <div style="overflow-x:auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Role</th>
+                        <th>Blood Type (Donors)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
